@@ -29,7 +29,7 @@ class World(pygame.Rect):
     def clear (self):
         self.actors = []
         self.health = 20
-        self.points = 0 
+        self.points = 0
         self.herosayjin = Hero(self)
         self.add_actor(self.herosayjin)
         for i in range(0, 20):
