@@ -1,7 +1,5 @@
 import pygame
 
-
-
 from World import World
 
 BLACK = (0, 0, 0)
@@ -10,11 +8,10 @@ pygame.font.init()
 myfont = pygame.font.SysFont("monospace", 30)
 pygame.display.set_caption('Hero Sayjin')
 size = pygame.display.list_modes()[0]
-screen = pygame.display.set_mode(size,pygame.FULLSCREEN)
-image_background = pygame.transform.scale(pygame.image.load("resources/image.jpg").convert_alpha(),size)
+screen = pygame.display.set_mode(size, pygame.FULLSCREEN)
+image_background = pygame.transform.scale(pygame.image.load("resources/image.jpg").convert_alpha(), size)
 image_over = pygame.image.load("resources/gameover.png").convert_alpha()
 world = World(size[0], size[1])
-
 
 clock = pygame.time.Clock()
 done = False
@@ -22,7 +19,7 @@ while not done:
 
     if world.health <= 0:
         for event in pygame.event.get():
-            if  event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
+            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
                 done = True
             if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                 world.clear()

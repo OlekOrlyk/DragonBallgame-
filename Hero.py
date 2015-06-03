@@ -7,11 +7,9 @@ class Hero(Actor.Actor):
     def __init__(self, world):
         super(Hero, self).__init__(world)
         self.fire_now = 0
-        self.health = 100
-
 
     def load_image(self):
-        self.image = pygame.image.load("resources/actor.png").convert_alpha()
+        self.set_image(pygame.image.load("resources/actor.png").convert_alpha())
         self.image_stop = self.image
         self.image_move = pygame.image.load("resources/actor move.png").convert_alpha()
         self.image_jump = pygame.image.load("resources/actor jump.png").convert_alpha()

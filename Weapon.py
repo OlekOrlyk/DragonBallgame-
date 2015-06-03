@@ -9,7 +9,6 @@ class Weapon(Actor.Actor):
         self.y = 0
         self.speed_x = 15
         self.speed_y = 0
-        self.load_image()
 
     def load_image(self):
         self.set_image(pygame.image.load("resources/little hit.png").convert_alpha())

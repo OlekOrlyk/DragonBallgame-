@@ -25,7 +25,6 @@ class Bot(Actor.Actor):
     def update(self):
         super(Bot, self).update()
         self.next_turn -= 1
-        super(Bot, self).update()
         if self.x < -self.width:
             self.world.remove_actor(self)
             self.world.health -= 1
@@ -51,4 +50,3 @@ class Bot(Actor.Actor):
             explosion.x = self.x
             explosion.y = self.y
             self.world.add_actor(explosion)
-

@@ -1,6 +1,7 @@
 import pygame
 from Bot import Bot
-from  Hero import Hero
+from Hero import Hero
+
 
 class World(pygame.Rect):
     def __init__(self, width, height):
@@ -26,7 +27,7 @@ class World(pygame.Rect):
         for actor in self.actors:
             actor.draw(screen)
 
-    def clear (self):
+    def clear(self):
         self.actors = []
         self.health = 20
         self.points = 0
